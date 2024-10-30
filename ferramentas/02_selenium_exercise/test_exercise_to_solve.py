@@ -11,7 +11,6 @@ from selenium.webdriver import ChromeOptions
 #Função criada para obter webdriver do Chrome, no meu ambiente estava tendo erro ao obter como indicado na aula, por isso a necessidade dessas tratativas.
 def start_driver():
     try:
-        driver = webdriver.Chrome()
         options = ChromeOptions()
         options.add_argument("--headless")
         options.add_argument("--no-sandbox")
