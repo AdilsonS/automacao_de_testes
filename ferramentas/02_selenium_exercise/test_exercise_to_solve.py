@@ -30,8 +30,8 @@ def start_driver():
 def test():
     try:
         driver = start_driver()        
-        file_path = pathlib.Path(__file__).parent / "sample-exercise.html"
-        driver.get(f"file://{file_path}")
+        file_path = pathlib.Path(__file__).parent.resolve()
+        driver.get(f"file:////{file_path}/sample-exercise_.html")
         
         title = driver.title
         assert title == "Sample page"
